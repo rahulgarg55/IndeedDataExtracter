@@ -1,59 +1,83 @@
+/**
+ * This is the main HTML file for the Indeed Job Data Extractor application. It contains the structure and layout of the web page, including the header, main container with the search form, and various UI elements such as the loading indicator and error window.
+ *
+ * The HTML file sets up the basic structure of the page, including the necessary metadata, links to external stylesheets and fonts, and the main content areas. The search form allows users to input job title/keywords and location, which will be used to fetch job data from the Indeed API.
+ *
+ * The loading indicator and download box are used to display the progress and status of the job data extraction process. The error window is shown if an error occurs during the data extraction.
+ *
+ * This file is the entry point for the application and is responsible for rendering the user interface. The functionality for handling the form submission and data extraction is implemented in the `send.js` script file, which is included at the end of the HTML file.
+ */
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="header">
-        <h1>Indeed Job Data Extracter</h1>
+      <h1>Indeed Job Data Extracter</h1>
     </div>
     <div id="main-container">
-        <form id="form">
-            <div class="input">
-                <h2 class="title">What</h2>
-                <input id="what" name="what" type="text" placeholder="Job title, keywords or company"> 
-                <i class="fas fa-search"></i>
-            </div>
-            <div class="input">
-                <h2 class="title">Where</h2>
-                <input id="where" name="where" type="text" placeholder="City, state, or pin code">
-                <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <button id="submit-btn" type="submit">Find jobs</button>
-        </form>
-
-        <div id="loader">
-            <div class="progress">
-                <div class="progress-value"></div>
-            </div>
-            <div id="download-box">
-               <p id="download-title"></p>
-               <p id="download"></p>
-            </div>
-          
+      <form id="form">
+        <div class="input">
+          <h2 class="title">What</h2>
+          <input
+            id="what"
+            name="what"
+            type="text"
+            placeholder="Job title, keywords or company"
+          />
+          <i class="fas fa-search"></i>
         </div>
+        <div class="input">
+          <h2 class="title">Where</h2>
+          <input
+            id="where"
+            name="where"
+            type="text"
+            placeholder="City, state, or pin code"
+          />
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <button id="submit-btn" type="submit">Find jobs</button>
+      </form>
 
+      <div id="loader">
+        <div class="progress">
+          <div class="progress-value"></div>
+        </div>
+        <div id="download-box">
+          <p id="download-title"></p>
+          <p id="download"></p>
+        </div>
+      </div>
     </div>
 
     <div id="errorWindow">
-        <p>Error is occured ! Please Try again Later </p>
+      <p>Error is occured ! Please Try again Later</p>
     </div>
-  
-    <script src="send.js"></script>
 
-</body>
+    <script src="send.js"></script>
+  </body>
 </html>
