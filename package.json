@@ -1,0 +1,21 @@
+{
+  "name": "indeedjob",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "engines": {
+    "node": "14.17.3",
+    "npm":"6.14.13"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "bharat",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "puppeteer": "^13.0.1",
+    "xlsx": "^0.17.4"
+  }
+}
