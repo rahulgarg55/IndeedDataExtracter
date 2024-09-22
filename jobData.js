@@ -1,3 +1,13 @@
+/**
+ * Extracts job data from the Indeed website and saves it to an Excel file.
+ *
+ * @param {string} job - The job title to search for.
+ * @param {string} city - The city to search in.
+ * @returns {Promise<{ status: number, path: string | null }>} - An object with the status of the operation (1 for success, 0 for failure) and the path where the Excel file was saved.
+ */
+// let jobDataExtracter = async (job, city) => {
+//     // Function implementation
+// };
 const puppeteer = require('puppeteer');
 const xlsx=require('xlsx');
 const url = 'https://in.indeed.com/';

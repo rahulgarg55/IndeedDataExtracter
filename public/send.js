@@ -1,3 +1,10 @@
+/**
+ * Handles the submission of a form that extracts data from Indeed.com.
+ * - Validates the input fields and disables the submit button while the data is being extracted.
+ * - Sends a POST request to the server with the form data.
+ * - Displays a progress bar while the data is being extracted.
+ * - Displays the download link for the extracted data once the process is complete.
+ */
 
 const form=document.getElementById("form");
 
